@@ -1,0 +1,69 @@
+<div id="content">
+  <!-- PARTE AMMINISTRATIVA DI ACCETTAZIONE O MENO IDEE -->
+  <TMPL_IF NAME="ADMIN">
+    <TMPL_LOOP NAME="IDEAACCEPT">
+      <div class="ideaRequest">
+            <span class="field"><span class="label">Nome : </span><TMPL_VAR NAME="NOME"></span>
+            <span class="field"><span class="label">Email : </span><TMPL_VAR NAME="EMAIL"></span>
+            <span class="field"><span class="label">Telefono : </span><TMPL_VAR NAME="TELEFONO"></span>
+            <span class="field"><span class="label">Titolo : </span><TMPL_VAR NAME="TITOLO"></span>
+            <span class="field"><span class="messaggio">Messaggio</span><TMPL_VAR NAME="TESTO"></span>
+
+            <form action="workwithus.cgi" name="formCommento" method="post">
+            <div>
+              <input type="hidden" name="id" value="<TMPL_VAR NAME=ID>"></input>
+              <input type="submit" class="deleteRequest" name="delete" value="Elimina"></input> 
+              <input type="submit" class="acceptRequest" name="accept" value="Accetta"></input>
+            </div>
+            </form>
+          
+      </div>
+    </TMPL_LOOP>
+  <TMPL_ELSE>
+    
+    <!-- 
+
+      MESSAGGIO DI RINGRAZIAMENTO DOPO AVER INVIATO IDEA
+
+      -->
+    <TMPL_IF NAME="INVIATO">
+      <p class="thanks"> Grazie della tua collaborazione</p>
+      <p title="ti confermiamo che la tua idea è stata inviata con successo " class="thanks"> Qualcuno del nostro staff ti contatter&agrave; per la buona o meno riuscita della tua richiesta </p>
+      <p class="thanks"> Dai un occhiata alle altre <a title="collegamento alla pagina idee" href="./idee.cgi">idee</a> oppure torna alla <a title="collegamento alla pagina principale" href="../cgi-bin/index.cgi">HOME</a></p>
+      <p class="thanks"> A presto! </p>
+    <TMPL_ELSE>
+
+      <!-- 
+
+        PARTE RELATIVA AL FORM DI COMPILAZIONE DELL'IDEA 
+
+      -->
+      <h2>Lavora con Noi!</h2>
+      <h3>Tutto il giorno guardiamo la posta in arrivo, aspettando che a qualcuno importi. Quindi, dacci un segno! </h3>
+      <p>
+        Siamo sempre in cerca di volti nuovi e idee nuove. Se hai qualcosa da dire compila il form. I nostri esperti sceglieranno quelle migliore e sarai contattato direttamente dal nostro staff. Potrai comunque vedere cosa ne pensano gli altri in quanto la tua idea sar&agrave; pubbliccata nella nostra pagina <a title="collegamento alla pagina idee" href="../cgi-bin/idee.cgi">IDEE</a>
+      </p>
+      <p>Per favore compila tutti i campi del form</p>
+      <form id="newComment" action="../cgi-bin/workwithus.cgi" method="post">
+      <div>
+        <input title="inserisci qui il tuo nome" onclick="checkIn(this,'Tuo nome');"  onfocus="checkIn(this,'Tuo nome');" onblur="checkOut(this,'Tuo nome');" type="text" name="nome" id="nome" value="<TMPL_VAR NAME='PREVIOUS_NAME'>"></input>
+        <TMPL_IF NAME="EMPTY_NAME"><span class="errorData">nome non valido</span></TMPL_IF>
+
+        <input title="inserisci qui il tuo indirizzo di posta elettronica" onclick="checkIn(this,'Email tua');"  onfocus="checkIn(this,'Email tua');" onblur="checkOut(this,'Email tua');" type="text" name="email" id="email" value="<TMPL_VAR NAME='PREVIOUS_EMAIL'>"></input>
+        <TMPL_IF NAME="EMPTY_EMAIL"><span class="errorData">email non valida</span></TMPL_IF>
+
+        <input title="inserisci qui il tuo numero di telefono senza spazi" onclick="checkIn(this,'Recapito telefonico');"  onfocus="checkIn(this,'Recapito telefonico');" onblur="checkOut(this,'Recapito telefonico');" type="text" name="telefono" id="telefono" value="<TMPL_VAR NAME='PREVIOUS_TEL'>"></input>
+        <TMPL_IF NAME="EMPTY_TEL"><span class="errorData"> telefono non valido</span></TMPL_IF>
+        
+        <input title="inserisci qui il titolo della tua idea" onclick="checkIn(this,'Titolo idea');" onfocus="checkIn(this,'Titolo idea');" onblur="checkOut(this,'Titolo idea');" type="text" name="titolo" id="titolo" value="<TMPL_VAR NAME='PREVIOUS_TITLE'>"></input>
+        <TMPL_IF NAME="EMPTY_TITOLO"><span class="errorData">titolo non valido</span></TMPL_IF>     
+
+        <textarea title="descrivi qui la tua idea con qualche riga" onclick="checkIn(this,'Descrizione idea');"  onfocus="checkIn(this,'Descrizione idea');" onblur="checkOut(this,'Descrizione idea');" name="descrizione" id="descrizione" cols="5" rows="5"><TMPL_VAR NAME='PREVIOUS_TEXT'></textarea>
+        <TMPL_IF NAME="EMPTY_TESTO"><span class="errorData">descrizione non valida</span></TMPL_IF>
+
+        <input title="clicca qui per inviare la tua geniale idea" type="submit" id="nuovaIdea" name="invia_idea" value="Invia Idea!"></input>
+      </div>
+      </form>
+    </TMPL_IF>
+  </TMPL_IF>
+</div>  

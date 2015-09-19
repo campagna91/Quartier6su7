@@ -1,0 +1,36 @@
+div#loginBar {
+display:table;
+height:400px;
+text-align:center;
+width:100%;
+}
+input#loginUsername,input#loginPassword {
+display:block;
+width:80%;
+height:80px;
+border-radius:20px;
+font-size:2em;
+-webkit-border-radius:20px;
+-moz-border-radius:20px;
+}
+input#login {
+background-color:red;
+border:none;
+color:#FFF;
+display:block;
+height:120px;
+margin:0 auto;
+margin-top:10px;
+width:70%;
+font-size:3em;
+border-radius:50px;
+}
+span.errorLogin {
+width:40%;
+font-size:1.2em;
+}
+form#loginForm {
+display:table-cell;
+vertical-align:middle;
+
+}

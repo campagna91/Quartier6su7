@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://localhost" targetNamespace="http://localhost" elementFormDefault="qualified">
+    
+    <xsd:element name="utenti" type="TipoUtenti"/>
+    <!-- definizione Tutenti -->
+        <xsd:complexType name="TipoUtenti">
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="utente" type="TipoUtente"/>
+            </xsd:sequence>
+        </xsd:complexType>
+        <!-- definizione Tutente -->
+        <xsd:complexType name="TipoUtente">
+            <xsd:sequence>
+                <xsd:element name="nome" type="xsd:string"/>
+                <xsd:element name="email" type="xsd:string"/>
+                <xsd:element name="password" type="xsd:string"/>
+                <xsd:element name="tipo" type="Ttipo"/>
+            </xsd:sequence>
+            <xsd:attribute name="username" type="xsd::string" use="required"/>
+        </xsd:complexType>
+        <!-- definizione Ttipo -->
+        <xsd:simpleType name="Ttipo">
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="admin"/>
+                <xsd:enumeration value="user"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+</xsd:schema>

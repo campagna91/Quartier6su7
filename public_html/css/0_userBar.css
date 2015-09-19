@@ -1,0 +1,4 @@
+#loginBar,#loggedBar,#loginBar>div{
+display:none;
+background-color:red;
+}

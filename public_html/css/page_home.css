@@ -1,0 +1,57 @@
+@import url(./Module_header.css);
+@import url(./Module_userBar.css);
+@import url(./Module_footer.css);
+@import url(./0_page_home.css) only print;
+#content {
+background-color:rgba(0,0,0,0.7);
+}
+p.presentazione {
+color:#FFF;
+font-style:italic;
+letter-spacing:1px;
+line-height:2em;
+word-spacing:3px;
+}
+@media screen and (max-device-width:12in) and (min-width:320px){
+#content{
+width:80%;
+margin:0 auto;
+}
+p.presentazione {
+width:85%;
+color:#fff;
+font-size:2.5em;
+font-style:italic;
+letter-spacing:1px;
+line-height:2em;
+margin:20px auto;
+word-spacing:3px;
+}
+}
+@media only screen and (min-device-width:12.1in) and (min-width:961px){
+#content {
+border-radius:10px;
+margin:40px auto 50px;
+height:300px;
+width:60%;
+}
+p.presentazione {
+display:table-cell;
+font-size:1.1em;
+height:282px;
+padding:20px;
+vertical-align:middle;
+}
+div#smile {
+background-image:url(../media/smile.png);
+background-size:181px;
+float:left;
+height:181px;
+margin:45px 10px 0;
+width:181px;
+}
+#footer {
+margin-bottom:0;
+position:absolute;
+}
+}

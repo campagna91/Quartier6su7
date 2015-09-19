@@ -1,0 +1,24 @@
+<div id="content">
+	<div id="bando">
+		<div id="img_0" style="background-image:url('../public_html/media/youtuber.jpg')"></div>
+		<p class="bando">
+			Quartiere7 &egrave; un gruppo di persone appassionate di tutto quello che riguarda internet e video. Il loro scopo dichiarato &egrave; quello di alzare il livello del divertimento <span xml:lang="en">online</span> di qualit&agrave; in Italia. 
+		</p>
+		<p class="bando">
+			Quello non dicharato &egrave; di conoscere la fama e la ricchezza in modo da ritirarsi in una Repubblica delle banane senza accordi di estradizione con l'italia. Il gruppo &egrave; formato da registi, comici, editori, disegnatori, programmatori ed etilisti da tutto il paese.
+		</p>
+		<p class="bando">
+			Uniti sotto lo slogan "Sollazzo e paste all'amatriciana" loro dedicano il tempo allo sviluppo dei progetti comici <span xml:lang="en">online</span>, e sperano nel prossimo futuro di arrivare sul grande schermo e alla gloria eterna.
+		</p>
+	</div>
+	<div id="gruppo">
+		<TMPL_LOOP NAME=TEAM_INFO>
+			<div class="member">
+	          <div class="img_1" style="background-image:url('<TMPL_VAR NAME=IMG_SRC>')"></div>
+	          <span class="nome"><TMPL_VAR NAME=NOME></span>
+	          <span class="descr"><TMPL_VAR NAME=DESCR></span>
+	          <span class="pres"><TMPL_VAR NAME=PRES></span>
+	         </div>
+  		</TMPL_LOOP>
+	</div>
+</div>

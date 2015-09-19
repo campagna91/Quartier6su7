@@ -1,0 +1,34 @@
+#header {
+display:block;
+text-align:center;
+min-height:420px;
+}
+#header > img {
+display:none;
+}
+#nav {
+display:inline-block;
+width:100%;
+}
+#nav > ul {
+padding-left:0;
+text-align:left;
+width:90%;
+}
+#nav > ul > li {
+display:block;
+margin:5px 0 5px 10px;
+width:100%;
+}
+#nav > ul > li > a:link {
+color:#FFF;
+letter-spacing:1px;
+text-decoration:none;
+font-size:3em;
+}
+div#siteTitle > h1 {
+font-size:4em;
+display:block;
+margin-top:0;
+text-align: center;
+}

@@ -1,0 +1,50 @@
+#header {
+display:block;
+max-height:75px;
+min-height:75px;
+overflow: hidden;
+text-align:left;
+}
+#header > img {
+margin-top:0;
+border-radius:0;
+display:inline-block;
+height:75px;
+width:75px;
+
+}
+div#siteTitle {
+display:inline-block;
+height:75px;
+overflow: hidden;
+margin-bottom: 0px;
+}
+div#siteTitle > h1 {
+display:table;
+font-size:2.3em;
+margin:0;
+}
+#nav {
+display:inline-block;
+float:right;
+height:75px;
+width:65%;
+}
+#nav > ul {
+width:100%;
+text-align: right;
+padding-left:0;
+margin:0px auto;
+}
+#nav > ul > li {
+display:inline-block;
+margin:10px 20px;
+}
+#nav > ul > li > a:link {
+color:#FFF;
+font-size:1.5em;
+letter-spacing:1px;
+text-decoration:none;
+padding:3px;
+border-radius:10px;
+}

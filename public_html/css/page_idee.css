@@ -1,0 +1,252 @@
+@import url(./Module_header.css);
+@import url(./Module_userBar.css);
+@import url(./Module_footer.css);
+@import url(./0_page_idee.css) only print;
+#content>h2,#content>h3,h4 {
+color:#FFF;
+display:block;
+margin-bottom:20px;
+margin-top:20px;
+text-align:center;
+width:100%;
+}
+.idea {
+background-color:rgba(0,0,0,0.8);
+box-shadow:0 0 2px #000;
+overflow:hidden;
+}
+span.idea_titolo {
+background-color:rgba(0,0,0,0.7);
+color:#FFF;
+display:block;
+font-style:italic;
+font-weight:bolder;
+padding:1em 1em 1em 0;
+text-indent:1.5em;
+width:100%;
+}
+span.label {
+font-weight:bolder;
+}
+span.idea_testo {
+display:block;
+font-style:italic;
+margin:10px 10px 30px;
+text-align:justify;
+}
+.idea_info {
+background-color:orange;
+padding:5px;
+}
+.idea_info>span {
+margin:5px;
+}
+.idea_commenti {
+background-color:#000;
+color:#FFF;
+margin:0 auto;
+padding:10px;
+}
+.commento {
+display:table;
+line-height:1.5em;
+margin-bottom:10px;
+}
+.idea_commenti>h3 {
+text-align:center;
+}
+.idea_form>form>div>span {
+color:#FFF;
+}
+.idea_form>form>div>input {
+background-color:rgba(0,0,0,0.5);
+border:2px solid #FFF;
+border-radius:40px;
+color:#FFF;
+display:inline-block;
+margin:5px 0;
+padding:2px;
+text-indent:10px;
+}
+.idea_form>form>div>input[type=submit] {
+background-color:orange;
+border:none;
+display:block;
+text-indent:0;
+}
+p.no_idee_message {
+background-color:#666;
+border:1px solid #000;
+color:#FFF;
+font-size:25px;
+margin:20px auto;
+padding:10px;
+text-align:center;
+width:90%;
+}
+span.error_comment,span.right_comment {
+background-color:rgba(240,10,0,0.8);
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+color:#FFF;
+display:block;
+font-size:21px;
+font-weight:500;
+margin:0 auto;
+padding:5px;
+text-align:center;
+}
+span.right_comment {
+background-color:rgba(0,200,0,0.7);
+border-radius:0;
+}
+span.error_comment > a:link {
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+color:#FFF;
+display:block;
+font-weight:inherit;
+padding:5px;
+}
+span.error_comment > a:visited {
+color:inherit;
+}
+span.error_comment > a:hover {
+background-color:#FFF;
+color:#000;
+font-size:25px;
+}
+.commento > span {
+display:table-cell;
+}
+.commento > span.label {
+color:#FFF;
+font-weight:bolder;
+margin-right:20px;
+padding-right:20px;
+text-transform:uppercase;
+vertical-align:top;
+}
+span.error_comment {
+width:40%;
+}
+.idea_form {
+background-color:rgba(0,255,255,0.4);
+height:inherit;
+margin:10px auto 0;
+padding:10px;
+text-align:left;
+}
+span.commento_testo {
+border:2px solid grey;
+display:block;
+line-height:1.2em;
+margin-left:10px;
+max-width:85%;
+vertical-align:bottom;
+}
+.idea_form>form>input[type=submit]:hover {
+box-shadow:0 0 2px #0FF;
+}
+span.idea_autore,span.idea_mail,span.idea_telefono,.idea_form > form > input.testo_nuovo_commento {
+display:block;
+}
+@media only screen and (max-device-width:12in) {
+.idea {
+margin:0 auto;
+margin-top:40px;
+margin-bottom: 40px;
+width:98%;
+}
+.idea_commenti {
+width:100%;
+}
+.commento {
+margin-top:30px;
+}
+.commento > span.label {
+font-size:2em;
+}
+.idea_form {
+height:500px;
+width:100%;
+}
+span.commento_testo {
+border-radius:50px;
+border-top-left-radius:0;
+font-size:2em;
+padding:30px;
+}
+.idea_form>form>div>input {
+font-size:30px;
+height:100px;
+}
+input.autore_nuovo_commento {
+width:60%;
+}
+.idea_form>form>div>input.testo_nuovo_commento {
+display:block;
+width:90%;
+}
+.idea_form>form>div>input[type=submit] {
+border-radius:100px;
+font-size:3em;
+height:150px;
+margin:30px auto 0;
+padding:40px;
+width:50%;
+color:#000;
+letter-spacing: 2px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+span.errore{
+display:block;
+font-size:40px;
+text-indent:1em;
+}
+}
+@media only screen and (min-device-width:12.1in) {
+.idea {
+margin:0 auto 15px;
+width:90%;
+}
+.idea_commenti {
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+width:85%;
+}
+.commento > span.label {
+font-size:14px;
+}
+.idea_form {
+border-top-left-radius:20px;
+border-top-right-radius:20px;
+height:150px;
+width:95%;
+}
+span.commento_testo {
+border-radius:10px;
+border-top-left-radius:0;
+padding:5px;
+}
+.idea_form>form>div>input {
+height:25px;
+}
+input.autore_nuovo_commento {
+width:200px;
+}
+.idea_form>form>div>input.testo_nuovo_commento {
+display:block;
+width:85%;
+}
+.idea_form>form>div>input[type=submit] {
+line-height:0;
+padding:20px;
+text-indent:0;
+}
+span.errore{
+display:inline-block;
+font-size:1em;
+text-indent:30px;
+}

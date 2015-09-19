@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<team xmlns:xs="http://wwww.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="team.xs">
+	<persona>
+		<srcPath>../public_html/media/team/i1.png</srcPath>
+		<nome>Bogdan</nome>
+		<descr>scenario, melodia, sentimento</descr>
+		<presentazione>Ragazzo sensibile con la barba. Cerca sempre il modo migliore di fare comicità</presentazione>
+	</persona>
+	<persona>
+		<srcPath>../public_html/media/team/i2.png</srcPath>
+		<nome>Ronald</nome>
+		<descr>attore senza paura, serpenti</descr>
+		<presentazione>Quando noi abbiamo paura lui entra in azione.</presentazione>
+	</persona>
+	<persona>
+		<srcPath>../public_html/media/team/i3.png</srcPath>
+		<nome>Abdel</nome>
+		<descr>grafica, caffe</descr>
+		<presentazione>Lavora come nessun altro con un originalita pazzesca e ci porta il caffe </presentazione>
+	</persona>
+	<persona>
+		<srcPath>../public_html/media/team/i4.png</srcPath>
+		<nome>Bam</nome>
+		<descr>suono, programmazione</descr>
+		<presentazione>Non lo sazia nessuno.</presentazione>
+	</persona>
+	<persona>
+		<srcPath>../public_html/media/team/i5.png</srcPath>
+		<nome>Abramburica</nome>
+		<descr>mezzo di trasporto</descr>
+		<presentazione>Non potevamo non nominare il nostro mezzo di trasporto.</presentazione>
+	</persona>
+	<persona>
+		<srcPath>../public_html/media/team/lui.jpg</srcPath>
+		<nome>Lui</nome>
+		<descr>visionario distorto</descr>
+		<presentazione>lui non centra, non appare e non lo si vede ma : esiste !</presentazione>
+	</persona>
+</team>

@@ -1,0 +1,5 @@
+@import url('./0_footer.css') only print;
+@import url('./1_footer.css') only screen and (max-device-width:12in) and (orientation:portrait);
+@import url('./1_footer.css') only screen and (max-device-width:12in) and (orientation:landscape);
+@import url('./1_footer.css') only screen and (min-device-width:12.1in) and (max-width:960px);
+@import url('./2_footer.css') only screen and (min-device-width:12.1in) and (min-width:961px);

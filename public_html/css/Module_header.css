@@ -1,0 +1,50 @@
+@import url(./0_header.css) only print;
+@import url('./1_header.css') only screen and (max-device-width:12in) and (orientation:portrait);
+@import url('./2_header.css') only screen and (max-device-width:12in) and (orientation:landscape);
+@import url('./1_header.css') only screen and (min-device-width:12.1in) and (max-width:899px);
+@import url('./2_header.css') only screen and (min-device-width:12.1in) and (min-width:900px);
+@import url('./3_header.css') only screen and (min-device-width:12.1in) and (min-width:1200px);
+#breadcumbs > h2 {
+background-color:#444;
+color:#FFF;
+display:block;
+font-size:16px;
+margin:0;
+padding-bottom:5px;
+padding-right:20px;
+padding-top:5px;
+text-align:right;
+}
+body {
+background-color:grey;
+height:100%;
+margin:0;
+width:100%;
+}
+div#header {
+background-color:#000;
+color:#fff;
+}
+span#subtitle {
+display:table;
+font-size:.4em;
+width:100%;
+}
+a:visited {
+color:grey;
+font-weight:bolder;
+}
+a.actual_section {
+background-color:#FFF;
+color:#000;
+cursor:default;
+font-size:1.5em;
+pointer-events:none;
+}
+a.not_actual_section:hover {
+color:#FFF;
+text-shadow:0 0 2px #FFF;
+}
+ul {
+list-style:none;
+}

@@ -1,0 +1,22 @@
+span.errorLogin {
+display:inline-block;
+width:120px;
+}
+input#loginPassword,input#loginUsername {
+margin-bottom:5px;
+height:30px;
+}
+div#loginBar {
+text-align:right;
+}
+form#loginForm{
+margin-bottom:0px;
+}
+input#login {
+background-color:red;
+border:none;
+border-radius:10px;
+color:#fff;
+height:46px;
+margin:4px;
+}

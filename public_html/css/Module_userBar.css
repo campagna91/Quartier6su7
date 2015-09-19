@@ -1,0 +1,50 @@
+@import url('./0_userBar.css') only print;
+@import url('./1_userBar.css') only screen and (max-device-width:12in) and (orientation:portrait);
+@import url('./1_userBar.css') only screen and (max-device-width:12in) and (orientation:landscape);
+@import url('./1_userBar.css') only screen and (min-device-width:12.1in) and (max-width:829px);
+@import url('./2_userBar.css') only screen and (min-device-width:12.1in) and (min-width:830px);
+@import url('./2_userBar.css') only screen and (min-device-width:12.1in) and (min-width:1200px);
+div#loginBar,div#loggedBar {
+background-color:rgba(0,0,0,0.7);
+}
+input[type=submit]:hover {
+background-color:#FFF;
+color:#000;
+font-weight:bolder;
+}
+div#loggedBar {
+color:#FFF;
+height:50px;
+text-align:right;
+}
+div#loggedBar > * {
+display:inline-block;
+}
+input#logged {
+background-color:red;
+border:none;
+color:#FFF;
+font-size:16px;
+height:50px;
+margin-left:10px;
+}
+span.errorLogin {
+background-color:red;
+border:2px solid #FFF;
+border-radius:10px;
+color:#FFF;
+margin:20px auto;
+text-align:center;
+}
+input#loginUsername,input#loginPassword {
+background-color:rgba(0,0,0,0.5);
+border:2px solid #FFF;
+border-radius:40px;
+color:#FFF;
+margin:10px auto 0;
+text-align:center;
+}
+input#loginPassword:hover,input#loginUsername:hover {
+border:2px solid rgba(0,255,255,0.8);
+box-shadow:0 0 2px #FFF;
+}

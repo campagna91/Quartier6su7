@@ -1,0 +1,68 @@
+<div id="content">
+		<!-- COMMENTO ERRATO -->
+		<TMPL_IF NAME='ERROR_COMMENT'>
+			<span class="error_comment">Errore durante la compilazione dell'idea 
+				<a href="#<TMPL_VAR NAME='ID_FAIL'>">
+					<TMPL_VAR NAME="TITOLO_IDEA_FAIL">
+				</a>
+			</span>
+		</TMPL_IF>
+		<!-- COMMENTO INVIATO CON SUCCESSO -->
+		<TMPL_IF NAME='RIGHT_COMMENT'>
+			<span class="right_comment">Commento inserito correttamente</span>
+		</TMPL_IF>
+	<TMPL_IF NAME="IDEE">
+	<!-- #IDEE -->
+		<h2><TMPL_VAR NAME="N_IDEE"> geniali idee trovate !</h2>	
+		<TMPL_LOOP NAME="IDEA">
+			<div class="idea" id="<TMPL_VAR NAME='ID'>">
+				<!-- BOX INFORMAZIONI -->
+				<span class="idea_titolo"><TMPL_VAR NAME="TITOLO_IDEA"></span>
+				<div class="idea_info">
+					<span class="idea_autore"><span class="label">Autore </span><TMPL_VAR NAME="AUTORE_IDEA"></span>
+					<span class="idea_mail"><span class="label">Mail </span><TMPL_VAR NAME="MAIL_IDEA"></span>
+					<span class="idea_telefono"><span class="label">Telefono </span><TMPL_VAR NAME="TELEFONO_IDEA"></span>
+					<span class="idea_testo"><TMPL_VAR NAME="TESTO_IDEA"></span>
+				</div>
+				
+				<!-- BOX COMMENTI RICEVUTI-->
+				<div title="seguono poi i commenti per l'idea <TMPL_VAR NAME='TITOLO_IDEA'>"class="idea_commenti">
+					<h3>COMMENTI</h3>
+					<TMPL_IF NAME="COMMENTI">
+						<TMPL_LOOP NAME="COMMENTI">
+							<div class="commento">
+								<span class="label"><TMPL_VAR NAME="AUTORE_COMMENTO"></span>
+								<span class="commento_testo"><TMPL_VAR NAME="TESTO_COMMENTO"></span>
+							</div>
+						</TMPL_LOOP>
+					<TMPL_ELSE>
+						<div class="commento"><h4 >NESSUN COMMENTO PER QUESTA IDEA</h4></div>
+					</TMPL_IF>
+				</div>
+
+				<!-- BOX NUOVO COMMENTO -->
+			
+				<div title="hai un opinione in merito all'idea appena letta? se si commenta di seguito" class="idea_form">
+					<form action="idee.cgi" method="post" title="form relativo al commento dell'idea appena letta">
+					  <div>
+						<input title="inserisci qui il tuo nome" class="autore_nuovo_commento" type="text" onclick="chekIn(this,'Tuo nome');" onblur="checkOut(this,'Tuo nome');" onfocus="checkIn(this,'Tuo nome');" name="autore_nuovo_commento" value="Tuo nome" title="inserisci il tuo nome per commentare" onclick=""></input>
+						<span style="visibility:hidden;" class="errore"> Nome obbligatorio! </span>
+						<input title="inserisci qui il tuo commento"class="testo_nuovo_commento" onclick="checkIn(this,'Testo del commento');" onblur="checkOut(this,'Testo del commento');" onfocus="chekIn(this,'Testo del commento');" name="testo_nuovo_commento" title="inserisci il tuo commeto per idea appena letta" value="Testo del commento"></input>
+						<input type="hidden" name="id_nuovo_commento" value="<TMPL_VAR NAME='ID'>"></input>
+						<span style="visibility:hidden;" class="errore"> Testo obbligatorio! </span>
+						<input type="hidden" name="titolo_idea_hidden" value="<TMPL_VAR NAME='TITOLO_IDEA'>"></input>
+						<input title="clicca per inviare il tuo commento" class="inviaNuovaIdea" type="submit" name="commenta" value="Invia" onclick="return checkNewComment(this.parentNode);"></input>
+					  </div>
+					</form>
+
+				</div>
+
+			</div>
+		</TMPL_LOOP>
+	<TMPL_ELSE>
+	<!-- NESSUNA IDEA -->
+		<div class="no_idee">
+			<p class="no_idee_message">Per ora purtroppo nessuna idea :( </p>
+		</div>
+	</TMPL_IF>
+</div>

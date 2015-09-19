@@ -1,0 +1,24 @@
+
+<TMPL_IF NAME="NAME_USER">
+	<div id="loggedBar">
+			<span id="messaggio_benvenuto"> Benvenuto <TMPL_VAR NAME="NAME_USER"> 
+			</span>
+		<form method="post" action="index.cgi" name="logoutForm">
+			<input type="submit" name="logout" id="logged" value="Esci"/>
+		</form>
+	</div>
+
+<TMPL_ELSE>
+	<div id="loginBar">
+		<form method="post" id="loginForm" action="<TMPL_VAR NAME=ACTION>">
+		<div>
+			<TMPL_IF NAME="ERROR_LOGIN">
+				<span class="errorLogin"> &nbsp Dati errati &nbsp</span>
+			</TMPL_IF>
+			<input type="text" name="username" id="loginUsername" value="username" onfocus="checkIn(this,'username');" onblur="checkOut(this,'username');" title="inserisci nome utente"/>
+			<input type="password" id="loginPassword" name="password" value="password" title="inserisci password" onfocus="checkIn(this,'password');" onblur="checkOut(this,'password');"/>
+			<input name="login" id="login" type="submit" value="ENTRA"/>
+		</div>
+		</form>
+	</div>	
+</TMPL_IF>

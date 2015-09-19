@@ -1,0 +1,10 @@
+div#content>p{
+	font-size:12px;
+	color:black;
+	width:90%;
+}
+input.acceptRequest, input.deleteRequest,div#content>p+p,form#newComment{display:none;}
+div.ideaRequest{
+	margin-top:0px;
+	margin-bottom:0px;
+}

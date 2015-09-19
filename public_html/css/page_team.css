@@ -1,0 +1,100 @@
+@import url(./Module_header.css);
+@import url(./Module_userBar.css);
+@import url(./Module_footer.css);
+@import url(./0_page_team.css) only print;
+#content {
+background-color:#666;
+text-align:center;
+}
+#img_0 {
+background-size:80px;
+color:#FFF;
+float:left;
+height:80px;
+margin-left:10px;
+margin-right:10px;
+width:80px;
+}
+p.bando {
+color:#FFF;
+letter-spacing:1px;
+line-height:1.5em;
+margin:20px 20px 0;
+padding:10px;
+text-align:justify;
+}
+.member {
+background-color:rgba(0,0,0,0.6);
+border:2px solid #444;
+border-radius:10px;
+margin:20px;
+padding-bottom:10px;
+}
+#content > #gruppo > .member > span {
+color:#FFF;
+display:block;
+margin:0 auto;
+text-align:center;
+width:95%;
+}
+span.nome {
+font-weight:bolder;
+}
+span.descr {
+font-size:14px;
+font-weight:bolder;
+}
+@media screen and (max-width:1151px) {
+#content {
+padding-bottom:10px;
+width:100%;
+}
+p.bando {
+font-size:1.5em;
+line-height:1.5em;
+padding:10px;
+}
+.member {
+display:block;
+width:95%;
+}
+.img_1 {
+display:none;
+}
+span.nome {
+font-size:16px;
+}
+span.descr {
+font-size:14px;
+}
+}
+@media screen and (min-width:1152px) {
+#content {
+margin:20px auto;
+width:90%;
+}
+p.bando {
+font-size:1.1em;
+line-height:1.3em;
+}
+.member {
+display:inline-block;
+height:350px;
+overflow:hidden;
+width:350px;
+}
+.img_1 {
+background-repeat:no-repeat;
+background-size:100%;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+height:250px;
+margin-bottom:10px;
+width:350px;
+}
+span.nome {
+border-radius:20px;
+font-size:18px;
+line-height:2em;
+}
+}

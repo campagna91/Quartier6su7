@@ -1,0 +1,16 @@
+div.idea{
+	border:1px solid black;
+	width:800px;
+	margin:0 auto;
+	overflow: hidden;
+}
+div.idea_form{display:none;}
+span.idea_testo{width:80%;}
+span.idea_commenti{font-size:12px;}
+span.commento_testo{display:none;}
+span.idea_titolo{
+	text-align: center;
+	color:#FFF;
+	border-top:2px solid black;
+	border-bottom:1px solid black;
+	margin-right:0 auto;}
